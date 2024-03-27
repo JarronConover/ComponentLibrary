@@ -1,0 +1,168 @@
+:root{
+    --primary : #344e41;
+    --secondary : #3a5a40;
+    --tertiary : #588157; 
+    --light : #dad7cd;
+    --contrast : #a3b18a;
+}
+
+#thisBody{
+   display: flex;
+   flex-direction: column;
+   flex-wrap: nowrap;
+   align-items: center;
+   justify-content: center;
+}
+
+#spinnerText{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: em;
+    background-color: var(--light);
+    color: var(--primary);
+
+    padding: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 64px;
+    width: 32px;
+    height: 32px;
+
+
+    animation: spinningText;
+    animation-duration: 4s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    
+}
+@keyframes spinningText{
+    0%{
+        transform: rotateZ(0deg);
+    }
+    50%{
+        transform: rotateZ(180deg);
+        background-color: #344e41;
+        color: #a3b18a;
+    }
+    100%{
+        transform: rotateZ(360deg);
+    }
+
+}
+
+#spinnerDiv{
+    display: flex;
+    justify-content: center;
+}
+
+.interactiveSpinner{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    font-size: em;
+    background-color: var(--light);
+    color: var(--primary);
+
+    margin: 4px;
+    padding: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 64px;
+    width: 32px;
+    height: 32px;
+}
+
+#spinnerFirst{
+    animation: first;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+   
+#spinnerMiddle{
+    animation: middle;
+    animation-duration: 2s;
+    animation-timing-function:linear;
+    animation-iteration-count: infinite;   
+}
+
+#spinnerLast{
+    animation: last;
+    animation-duration: 2s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;   
+}
+
+@keyframes first {
+    0%{
+        transform: translate(0, 0);
+    }
+    50%{
+        transform: translate(0, 100px);
+    }
+    
+    100%{
+        transform: translate(0, 0);
+    }
+}
+
+
+@keyframes middle {
+    0%{
+        transform: translate(0, 50px);
+    }
+    25%{
+        transform: translate(0, 100px);
+    }
+    50%{
+        transform: translate(0, 50px);
+    }
+    75%{
+        transform: translate(0, 0px);
+    }
+    
+    100%{
+        transform: translate(0, 50px);
+    }
+}
+
+@keyframes last {
+    0%{
+        transform: translate(0, 100px);
+    }
+    50%{
+        transform: translate(0, 0px);
+    }
+    
+    100%{
+        transform: translate(0, 100px);
+    }
+}
+
+#spinnerPersonal{
+    display: flex;
+    padding: 12px;
+    background-color: white;
+    border-radius: 24px;
+
+    animation: steamboat;
+    animation-duration: 3s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+}
+@keyframes steamboat{
+    0%{
+        transform: rotateZ(-20deg)
+    }
+    50%{
+        transform: rotateZ(20deg)
+    }
+    
+    100%{
+        transform: rotateZ(-20deg)
+    }
+}
+
+#SteamBoatWillie{
+    width: 128px;
+    height: 128px;
+}
