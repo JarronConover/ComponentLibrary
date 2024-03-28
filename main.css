@@ -10,6 +10,11 @@ html{
     font-family:Georgia, 'Times New Roman', Times, serif;
     font-size: 1rem;
 }
+#mainbody{
+    display: flex;
+    flex-direction: column;
+    margin: 16px;
+}
 .title{
     display: flex;
     justify-content: center;
@@ -24,8 +29,17 @@ html{
     justify-content: start;
     align-items: center;
     padding: 8px;
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: bold;
+    color: var(--light);
+}
+.label{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    padding: 8px;
+    font-size: 1em;
+    font-weight: normal;
     color: var(--light);
 }
 .textbox{
@@ -33,14 +47,26 @@ html{
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    width: 90%;
+    margin: 8px;
+    width: 100%;
     min-height: 5%;
-    background-color: var(--contrast);
+    background-color: var(--light);
     border-radius: 16px;
 }
 .examplebox{
-    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+
+    margin: 8px;
+    padding: 16px;
+    max-width: 100%;
     min-height: 5%;
-    background-color: var(--contrast);
+    background-color: var(--tertiary);
     border-radius: 16px;
+}
+#spinnerExamplebox{
+    padding: 64px;
+    gap: 32px;
 }
