@@ -55,7 +55,7 @@
     justify-content: center;
 }
 
-.interactiveSpinner{
+.dotSpinner{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: em;
     background-color: var(--light);
@@ -143,12 +143,15 @@
     padding: 12px;
     background-color: white;
     border-radius: 24px;
+}
 
+#spinnerPersonal[data-clicked = "false"]{
     animation: steamboat;
     animation-duration: 3s;
     animation-timing-function: ease;
     animation-iteration-count: infinite;
 }
+
 @keyframes steamboat{
     0%{
         transform: rotateZ(-20deg)
@@ -165,4 +168,21 @@
 #SteamBoatWillie{
     width: 128px;
     height: 128px;
+}
+
+#spinnerPersonal[data-clicked = "true"]{
+    animation: flip;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+}
+@keyframes flip{
+    0%{
+        transform: rotateZ(0deg)
+    }
+
+    
+    100%{
+        transform: rotateZ(340deg)
+    }
 }

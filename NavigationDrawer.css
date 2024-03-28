@@ -1,0 +1,62 @@
+:root{
+    --primary : #344e41;
+    --secondary : #3a5a40;
+    --tertiary : #588157; 
+    --light : #dad7cd;
+    --contrast : #a3b18a;
+}
+
+#navdrawer{
+    position: fixed;
+    top: 64px;
+    left: -310;
+    bottom: 0;
+    width: 300px;
+    background-color: var(--contrast);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    transition: all .3s ease;
+}
+
+#navdrawer[data-open="true"]{
+    left: 0px;
+}
+
+.drawer{
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+    gap: 8px;
+    color: black;
+}
+
+#navbar{
+    margin: 0;
+    padding: 4px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--primary);
+    color: var(--light) ;
+    position: fixed; top: 0; left: 0; right: 0;
+}
+#navbutton{
+    background-color: var(--primary);
+    padding: 16px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--light);
+    cursor: pointer;
+}
+#navbutton:hover{
+    color: white;
+}
+

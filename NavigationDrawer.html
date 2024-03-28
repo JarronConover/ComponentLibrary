@@ -1,11 +1,20 @@
 <html>
     <header>
-        <script src="Button.js" defer=""></script>
-        <link rel="stylesheet" href="./Button.css"> 
+        <script src="NavigationDrawer.js" defer=""></script>
+        <link rel="stylesheet" href="./NavigationDrawer.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" /> 
     </header>
 </html>
 <body>
-    <div>
-        
-    </div>
+    <nav id="navbar">
+        <button id="navbutton">
+            <span class="material-symbols-outlined">menu</span>
+        </button>
+    </nav>
+    <nav id="navdrawer" data-open="">
+        <a class="drawer"><span class="material-symbols-outlined">deployed_code </span>Cube</a>
+        <a class="drawer"><span class="material-symbols-outlined">mail</span>Mail </a>
+        <a class="drawer"><span class="material-symbols-outlined">settings</span>Settings </a>
+        <a class="drawer"><span class="material-symbols-outlined">logout</span>Logout </a>
+    </nav>
 </body>
