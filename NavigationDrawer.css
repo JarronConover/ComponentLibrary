@@ -35,6 +35,10 @@
     color: black;
 }
 
+.drawer:hover{
+    color: var(--light);
+}
+
 #navbar{
     margin: 0;
     padding: 4px;

@@ -45,7 +45,7 @@ html{
 .textbox{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
     margin: 8px;
     width: 100%;
@@ -69,4 +69,9 @@ html{
 #spinnerExamplebox{
     padding: 64px;
     gap: 32px;
+}
+
+.text{
+    padding: 16px;
+    overflow-x: auto;
 }

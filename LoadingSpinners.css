@@ -6,14 +6,6 @@
     --contrast : #a3b18a;
 }
 
-#thisBody{
-   display: flex;
-   flex-direction: column;
-   flex-wrap: nowrap;
-   align-items: center;
-   justify-content: center;
-}
-
 #spinnerText{
     font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
     font-size: em;
