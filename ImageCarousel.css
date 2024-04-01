@@ -9,20 +9,51 @@
 .photo{
     width: 200px;
     height: 150px;
+    transition: all 1s ease;
 }
 
 #carousel{
     position: relative;
     display: flex;
     justify-content: start;
-    background-color: #344e41;
-    padding: 8px;
     overflow: hidden;
-    width: 400px;
+    width: 200px;
     height: 150px;
 }
 
-.photo[data-attribute=true]{
-    padding: 16px;
-    background-color: red;
+.photo[data-position="out"]{
+    
+position: absolute;
+left: 200px;
+
+animation: fadeout;
+animation-duration: .5s;
+animation-iteration-count: 1;
+animation-timing-function: ease;
+}
+
+.photo[data-position="in"]{
+    position: absolute;
+    z-index: 1;
+
+    animation: fadein;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+}
+
+@keyframes fadein {
+    from {
+        left: 200px;
+    } to{
+        left: 0px;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        left: 0px;
+    } to{
+        left: -200px;
+    }
 }

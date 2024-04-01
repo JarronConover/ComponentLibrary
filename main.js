@@ -259,13 +259,83 @@ fab.addEventListener("mouseup", (e) => {
 })`;
 
 document.getElementById("carousel-html").innerText = 
-``;
+`<div id="carousel" data-rotate="false">
+    <img class="photo" id="photo1" data-position="out" src="20211215-104830-Original.jpg" alt="black">
+    <img class="photo" id="photo2" data-position="out" src="20220530-072321-Original.jpg" alt="black">
+    <img class="photo" id="photo3" data-position="out" src="20220721-123702-Original.jpg" alt="black">
+    <img class="photo" id="photo4" data-position="out" src="20220727-125234-Original.jpg" alt="black">
+</div>`;
 
 document.getElementById("carousel-css").innerText = 
-``;
+`.photo{
+    width: 200px;
+    height: 150px;
+    transition: all 1s ease;
+}
+
+#carousel{
+    position: relative;
+    display: flex;
+    justify-content: start;
+    overflow: hidden;
+    width: 200px;
+    height: 150px;
+}
+
+.photo[data-position="out"]{
+    
+position: absolute;
+left: 200px;
+
+animation: fadeout;
+animation-duration: .5s;
+animation-iteration-count: 1;
+animation-timing-function: ease;
+}
+
+.photo[data-position="in"]{
+    position: absolute;
+    z-index: 1;
+
+    animation: fadein;
+    animation-duration: .5s;
+    animation-iteration-count: 1;
+    animation-timing-function: ease;
+}
+
+@keyframes fadein {
+    from {
+        left: 200px;
+    } to{
+        left: 0px;
+    }
+}
+
+@keyframes fadeout {
+    from {
+        left: 0px;
+    } to{
+        left: -200px;
+    }
+}`;
 
 document.getElementById("carousel-js").innerText = 
-``;
+`let index = 0;
+
+display();
+
+function display() {
+  let i;
+  let album = document.getElementsByClassName("photo");
+  for (i = 0; i < album.length; i++) {
+    album[i].setAttribute("data-position", "out");
+  }
+  if (index >= album.length) {index = 0};
+  album[index].setAttribute("data-position", "in")
+
+  index++;
+  setTimeout(display, 2000); 
+}`;
 
 document.getElementById("spinner-html").innerText = 
 `<div id="spinnerDiv">
