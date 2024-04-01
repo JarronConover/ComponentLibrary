@@ -75,3 +75,42 @@ html{
     padding: 16px;
     overflow-x: auto;
 }
+
+#navbarbox{
+    position: relative;
+    overflow: hidden;
+    
+}
+
+#navdrawerbox{
+    background-color: var(--light);
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+#navigationbutton{
+    background-color: var(--tertiary);
+    padding: 16px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--light);
+    cursor: pointer;
+}
+#navigationbutton:hover{
+    color: white;
+}
+
+#navigationbar{
+    margin: 0;
+    padding: 4px;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--tertiary);
+    color: var(--light) ;
+    position: absolute; top: 0; left: 0; right: 0; 
+}

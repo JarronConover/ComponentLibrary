@@ -7,7 +7,7 @@
 }
 
 #navdrawer{
-    position: fixed;
+    position: absolute;
     top: 64px;
     left: -310;
     bottom: 0;
@@ -46,12 +46,12 @@
     justify-content: start;
     align-items: center;
     gap: 8px;
-    background-color: var(--primary);
+    background-color: var(--tertiary);
     color: var(--light) ;
-    position: fixed; top: 0; left: 0; right: 0;
+    position: absolute; top: 0; left: 0; right: 0;
 }
 #navbutton{
-    background-color: var(--primary);
+    background-color: var(--tert);
     padding: 16px;
     border: none;
     display: flex;

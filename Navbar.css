@@ -13,9 +13,9 @@
     justify-content: start;
     align-items: center;
     gap: 8px;
-    background-color: var(--primary);
+    background-color: var(--secondary);
     color: var(--light) ;
-    position: fixed; top: 0; left: 0; right: 0; 
+    position: absolute; top: 0; left: 0; right: 0; 
 }
 #navbutton{
     background-color: var(--primary);
@@ -37,7 +37,7 @@
 }
 
 .link{
-    background-color: var(--primary);
+    background-color: var(--tertiary);
     padding: 16px;
     min-width: 64px;
     border: none;

@@ -1,0 +1,28 @@
+:root{
+    --primary : #344e41;
+    --secondary : #3a5a40;
+    --tertiary : #588157; 
+    --light : #dad7cd;
+    --contrast : #a3b18a;
+}
+
+.photo{
+    width: 200px;
+    height: 150px;
+}
+
+#carousel{
+    position: relative;
+    display: flex;
+    justify-content: start;
+    background-color: #344e41;
+    padding: 8px;
+    overflow: hidden;
+    width: 400px;
+    height: 150px;
+}
+
+.photo[data-attribute=true]{
+    padding: 16px;
+    background-color: red;
+}
